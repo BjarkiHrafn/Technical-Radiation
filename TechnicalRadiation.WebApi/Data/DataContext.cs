@@ -3,10 +3,13 @@ using TechnicalRadiation.WebApi.Models.Entities;
 
 namespace TechnicalRadiation.WebApi.Data
 {
-    public static class DataContext
+    public class DataContext
     {
-        private static List<NewsItem> _news = new List<NewsItem>
+        public IEnumerable<NewsItem> _news
         {
+            get{
+                return new List<NewsItem> {
+            
             new NewsItem
             {
                 AuthorID = 1,
@@ -166,8 +169,11 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
-            },
-
-        };
+            }
+                
+            };
+            }
+            
+        }
     }
 }
