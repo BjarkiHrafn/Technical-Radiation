@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using TechnicalRadiation.WebApi.Data;
 using TechnicalRadiation.WebApi.Models.DataTransferObjects;
@@ -10,6 +11,14 @@ namespace TechnicalRadiation.WebApi.Repositories
     public class NewsRepository
     {
         private readonly DataContext _data = new DataContext();
+        public string URL = "http://localhost:5000/";
+
+        public ExpandoObject putHrefinNews(string path, int id) {
+            ExpandoObject exp = new ExpandoObject();
+            exp.AddReference("href", URL + path + "/" + id.ToString());
+
+            return exp;
+        }
 
         public IEnumerable<NewsItemDto> getAllNews(int pageNumber, int pageSize) {
             var list =  _data._news.ToList().OrderByDescending(x => x.PublishDate).Select(x => new NewsItemDto() {
@@ -19,11 +28,22 @@ namespace TechnicalRadiation.WebApi.Repositories
                 ShortDescription = x.ShortDescription,
   
             }).Skip((pageNumber-1) * pageSize).Take(pageSize);
+
+            ExpandoObject expando = new ExpandoObject();
+
             
             foreach(NewsItemDto n in list) {
-                n.Links.AddReference(n.Id.ToString(), "http://localhost:5000/api/" + n.Id.ToString());
-                n.Links.AddReference(n.AuthorID.ToString(),"http://localhost:5000/api/authors" + n.AuthorID.ToString() );
-                n.Links.AddReference(n.CategoryID.ToString(),"http://localhost:5000/api/categories" + n.CategoryID.ToString() );
+                
+                n.Links.AddReference("self", expando = putHrefinNews("api", n.Id));
+                n.Links.AddReference("edit", expando = putHrefinNews("api", n.Id));
+                n.Links.AddReference("delete", expando = putHrefinNews("api", n.Id));
+                n.Links.AddReference("authors", expando = putHrefinNews("api/authors", n.AuthorID));
+                //setja category seinna
+                /*foreach(Category c in _data._categories){
+                    if(n.CategoryID == c.ID) {
+                        n.Links.AddReference("categories", expando = putHrefinNews("api/categories", c.ID));
+                    }
+                }*/
             }
 
             return list;
