@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TechnicalRadiation.WebApi.Models.Entities;
 
@@ -19,6 +20,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -29,6 +31,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -39,6 +42,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate =DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -49,6 +53,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -59,6 +64,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -69,6 +75,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -79,6 +86,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -89,6 +97,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -99,6 +108,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -109,6 +119,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -119,6 +130,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -129,6 +141,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -139,6 +152,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -149,6 +163,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -159,6 +174,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             },
             new NewsItem
             {
@@ -169,6 +185,7 @@ namespace TechnicalRadiation.WebApi.Data
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
+                PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             }
                 
             };

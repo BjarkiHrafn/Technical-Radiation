@@ -7,8 +7,12 @@ namespace TechnicalRadiation.WebApi.Service
     public class NewsService
     {
         public NewsRepository repo = new NewsRepository();
-        public IEnumerable<NewsItemDto> getAllNews() {
-            return repo.getAllNews();
+        public IEnumerable<NewsItemDetailDto> getAllNews(int pageNumber, int pageSize) {
+            return repo.getAllNews(pageNumber, pageSize);
+        }
+
+        public NewsItemDto getNewsByID(int id) {
+            return repo.GetNewsByID(id);
         }
     }
 }

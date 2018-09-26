@@ -1,3 +1,5 @@
+using System;
+
 namespace TechnicalRadiation.WebApi.Models.DataTransferObjects
 {
     public class NewsItemDetailDto
@@ -7,6 +9,6 @@ namespace TechnicalRadiation.WebApi.Models.DataTransferObjects
         public string ImgSource {get;set;}
         public string ShortDescription {get;set;}
         public string LongDescription {get;set;}
-        public System.DateTime PublishDate {get;set;}
+        public DateTime PublishDate {get;set;}
     }
 }
