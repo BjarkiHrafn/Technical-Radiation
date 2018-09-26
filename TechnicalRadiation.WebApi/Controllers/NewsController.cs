@@ -1,15 +1,24 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using TechnicalRadiation.WebApi.Models.DataTransferObjects;
+using TechnicalRadiation.WebApi.Service;
 
 namespace TechnicalRadiation.WebApi.Controllers
 {
-    [Route("/api")]
+    [Route("api")]
     public class NewsController : Controller
     {
+        private NewsService service = new NewsService();
         [HttpGet]
         [Route("")]
         public IActionResult GetAllNews([FromQuery] int pageNumber, [FromQuery]int pageSize) {
 
-           // string lang = "en-US";
+            if(pageNumber == 0) pageNumber = 1;
+            if(pageSize == 0) pageSize = 10;
+
+            IEnumerable<NewsItemDto> news = new List<NewsItemDto>();
+            news = service.getAllNews();
+
             /* 
             Envelope<ModelDetailsDTO> envMod = new Envelope<ModelDetailsDTO>();
             var type = Request.Headers.Keys.Contains("Accept-Language"); 
@@ -27,8 +36,10 @@ namespace TechnicalRadiation.WebApi.Controllers
 
             if(envMod.Items != null)
             return Ok(envMod);*/
+            if(news != null)
+            return Ok(news);
 
-            return Ok(418);
+            return Ok(404);
         }
     }
 }

@@ -1,0 +1,14 @@
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/bin/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.deps.json
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/bin/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.runtimeconfig.json
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/bin/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.runtimeconfig.dev.json
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/bin/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/bin/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.pdb
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.csprojAssemblyReference.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.csproj.CoreCompileInputs.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.RazorAssemblyInfo.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.RazorAssemblyInfo.cs
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.AssemblyInfoInputs.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.AssemblyInfo.cs
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.RazorTargetAssemblyInfo.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.pdb
