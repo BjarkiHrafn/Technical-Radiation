@@ -192,5 +192,79 @@ namespace TechnicalRadiation.WebApi.Data
             }
             
         }
+        public IEnumerable<Author> _authors
+        {
+            get{
+                return new List<Author> {
+            
+            new Author
+            {
+                Bio = "Eg elska bio og popp",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                Id = 0,
+                Name = "Bleller feller",
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ProfileImgSource = "blalalla.jpg"
+            },
+            new Author
+            {
+                Bio = "Eg elska bio og popp",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                Id = 1,
+                Name = "Blexxller feller",
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ProfileImgSource = "blalalla.jpg"
+            },
+            new Author
+            {
+                Bio = "Eg elska bio og popp",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                Id = 2,
+                Name = "Blevcller feller",
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ProfileImgSource = "blalalla.jpg"
+            },
+            new Author
+            {
+                Bio = "Eg elska bio og popp",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                Id = 3,
+                Name = "Ble4ller feller",
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ProfileImgSource = "blalalla.jpg"
+            },
+            new Author
+            {
+                Bio = "Eg elska bio og popp",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                Id = 4,
+                Name = "Ble3ller feller",
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ProfileImgSource = "blalalla.jpg"
+            },
+            new Author
+            {
+                Bio = "Eg elska bio og popp",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                Id = 5,
+                Name = "Blel2ler feller",
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ProfileImgSource = "blalalla.jpg"
+            },
+            new Author
+            {
+                Bio = "Eg elska bio og popp",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                Id = 6,
+                Name = "Blelsler feller",
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ProfileImgSource = "blalalla.jpg"
+            },
+            
+                
+            };
+            }
+            
+        }
     }
 }
