@@ -5,7 +5,7 @@ using TechnicalRadiation.WebApi.Service;
 
 namespace TechnicalRadiation.WebApi.Controllers
 {
-    [Route("api/news")]
+    [Route("api")]
     public class NewsController : Controller
     {
         private NewsService service = new NewsService();
@@ -16,7 +16,7 @@ namespace TechnicalRadiation.WebApi.Controllers
             if(pageNumber == 0) pageNumber = 1;
             if(pageSize == 0) pageSize = 10;
 
-            IEnumerable<NewsItemDetailDto> news = new List<NewsItemDetailDto>();
+            IEnumerable<NewsItemDto> news = new List<NewsItemDto>();
             news = service.getAllNews(pageNumber, pageSize);
 
             if(news != null)
@@ -28,7 +28,7 @@ namespace TechnicalRadiation.WebApi.Controllers
         [HttpGet]
         [Route("{id:int}")]
         public IActionResult getNewsByID(int id) {
-            NewsItemDto news = new NewsItemDto();
+            NewsItemDetailDto news = new NewsItemDetailDto();
             news = service.getNewsByID(id);
 
             if(news != null)
