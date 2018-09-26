@@ -5,7 +5,7 @@ using TechnicalRadiation.WebApi.Service;
 
 namespace TechnicalRadiation.WebApi.Controllers
 {
-    [Route("api")]
+    [Route("api/news")]
     public class NewsController : Controller
     {
         private NewsService service = new NewsService();
@@ -16,30 +16,25 @@ namespace TechnicalRadiation.WebApi.Controllers
             if(pageNumber == 0) pageNumber = 1;
             if(pageSize == 0) pageSize = 10;
 
-            IEnumerable<NewsItemDto> news = new List<NewsItemDto>();
-            news = service.getAllNews();
+            IEnumerable<NewsItemDetailDto> news = new List<NewsItemDetailDto>();
+            news = service.getAllNews(pageNumber, pageSize);
 
-            /* 
-            Envelope<ModelDetailsDTO> envMod = new Envelope<ModelDetailsDTO>();
-            var type = Request.Headers.Keys.Contains("Accept-Language"); 
-            var typeV = Request.Headers.Values.Contains("de-DE");
-            _server = new modelService();
-
-            if(pageNumber == 0) pageNumber = 1;
-            if(pageSize == 0) pageSize = 10;
-
-            envMod.PageNumber = pageNumber;
-            envMod.PageSize = pageSize;
-
-            if(type&&typeV)lang = "de-DE";
-            envMod.Items = _server.retrieveModels(lang, pageNumber, pageSize);
-
-            if(envMod.Items != null)
-            return Ok(envMod);*/
             if(news != null)
             return Ok(news);
 
-            return Ok(404);
+            return Ok("no news found");
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public IActionResult getNewsByID(int id) {
+            NewsItemDto news = new NewsItemDto();
+            news = service.getNewsByID(id);
+
+            if(news != null)
+            return Ok(news);
+
+            return Ok("no news found");
         }
     }
 }

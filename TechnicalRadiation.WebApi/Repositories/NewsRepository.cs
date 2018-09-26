@@ -10,34 +10,25 @@ namespace TechnicalRadiation.WebApi.Repositories
     {
         private readonly DataContext _data = new DataContext();
 
-        public IEnumerable<NewsItemDto> getAllNews() {
-            return _data._news.ToList().Select(x => new NewsItemDto() {
+        public IEnumerable<NewsItemDetailDto> getAllNews(int pageNumber, int pageSize) {
+            return _data._news.ToList().Select(x => new NewsItemDetailDto() {
                 Id = x.Id,
                 Title = x.Title,
                 ImgSource = x.ImgSource,
-                ShortDescription = x.ShortDescription
-            });
+                ShortDescription = x.ShortDescription,
+                PublishDate = x.PublishDate,
+                LongDescription = x.LongDescription,
+                
+            }).Skip((pageNumber-1) * pageSize).Take(pageSize).OrderByDescending(x => x.PublishDate);
         }
         
-        
-        
-        
-        /* 
-        public List<Model> _models => DataContext.Models;
-
-        public List<ModelDetailsDTO> retrieveModels(string lang, int pageNumber, int pageSize) {
-
-            List<ModelDetailsDTO> model = new List<ModelDetailsDTO>();
-            
-            model = ListExtensions.ToDetails(_models, lang).Skip((pageNumber-1) * pageSize).Take(pageSize).ToList();
-
-            foreach(ModelDetailsDTO m in model) {
-                m.Links.AddReference(m.Id.ToString(), "http://localhost:5000/api/model/" + m.Id.ToString());
-            }
-
-            if(_models.Count() < pageNumber * pageSize) return null;
-            
-            return model;
-        }*/
+        public NewsItemDto GetNewsByID(int id) {
+            return _data._news.ToList().Select(x => new NewsItemDto() {
+                Id = x.Id,
+                ImgSource = x.ImgSource,
+                ShortDescription = x.ShortDescription,
+                Title = x.Title
+            }).FirstOrDefault(x => x.Id == id);
+        }
     }
 }
