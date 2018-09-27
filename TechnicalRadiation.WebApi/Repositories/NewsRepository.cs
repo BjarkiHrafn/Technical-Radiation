@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using TechnicalRadiation.WebApi.Data;
 using TechnicalRadiation.WebApi.Models.DataTransferObjects;
 using TechnicalRadiation.WebApi.Models.Entities;
+using TechnicalRadiation.WebApi.Models.InputModels;
 using template.Extensions;
 
 namespace TechnicalRadiation.WebApi.Repositories
@@ -11,6 +13,7 @@ namespace TechnicalRadiation.WebApi.Repositories
     public class NewsRepository
     {
         public string URL = "http://localhost:5000/";
+        
 
         public ExpandoObject putHrefinNews(string path, int id) {
             ExpandoObject exp = new ExpandoObject();
@@ -67,5 +70,23 @@ namespace TechnicalRadiation.WebApi.Repositories
             return data;
 
         }
+
+
+        ///here come the post actions
+
+        public void createNewsItem(NewsItemInputModel model) {
+            
+            DataContext._news.Add(new NewsItem() {
+                
+                Id = DataContext._news.Max(x => x.Id) +1,
+                ImgSource = model.ImgSource,
+                Title = model.Title,
+                ShortDescription = model.ShortDescription,
+                LongDescription = model.LongDescription,
+                PublishDate = DateTime.Now,
+
+            });
+
+        } 
     }
 }

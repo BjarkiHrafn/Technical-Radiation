@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TechnicalRadiation.WebApi.Models.DataTransferObjects;
+using TechnicalRadiation.WebApi.Models.InputModels;
 using TechnicalRadiation.WebApi.Service;
 
 namespace TechnicalRadiation.WebApi.Controllers
@@ -8,6 +9,7 @@ namespace TechnicalRadiation.WebApi.Controllers
     [Route("api")]
     public class NewsController : Controller
     {
+        public string key = "k";
         private NewsService service = new NewsService();
         [HttpGet]
         [Route("")]
@@ -35,6 +37,24 @@ namespace TechnicalRadiation.WebApi.Controllers
             return Ok(news);
 
             return Ok("no news found");
+        }
+
+        ///add methods
+        [HttpPatch]
+        [Route("")]
+        public IActionResult addNews([FromBody] NewsItemInputModel model) {
+            
+            //if(!model.ValidateURL(model.ImgSource))
+              //  return Ok("Image source is incorrect");
+            var key = Request.Headers.Keys.Contains("Authorization");
+            var zelPass = Request.Headers.Values.Contains("k");
+
+            if(key && zelPass) {
+                service.createNewsItem(model);
+                return Ok(model);
+            }
+            return Ok("incorrect password sukkah");
+            
         }
     }
 }
