@@ -1,0 +1,14 @@
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/bin/Debug/netstandard2.0/TechnicalRadiation.Services.deps.json
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/bin/Debug/netstandard2.0/TechnicalRadiation.Services.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/bin/Debug/netstandard2.0/TechnicalRadiation.Services.pdb
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/bin/Debug/netstandard2.0/TechnicalRadiation.Models.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/bin/Debug/netstandard2.0/TechnicalRadiation.Repositories.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/bin/Debug/netstandard2.0/TechnicalRadiation.Models.pdb
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/bin/Debug/netstandard2.0/TechnicalRadiation.Repositories.pdb
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/obj/Debug/netstandard2.0/TechnicalRadiation.Services.csprojAssemblyReference.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/obj/Debug/netstandard2.0/TechnicalRadiation.Services.csproj.CoreCompileInputs.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/obj/Debug/netstandard2.0/TechnicalRadiation.Services.AssemblyInfoInputs.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/obj/Debug/netstandard2.0/TechnicalRadiation.Services.AssemblyInfo.cs
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/obj/Debug/netstandard2.0/TechnicalRadiation.Services.csproj.CopyComplete
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/obj/Debug/netstandard2.0/TechnicalRadiation.Services.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Services/obj/Debug/netstandard2.0/TechnicalRadiation.Services.pdb

@@ -25,7 +25,9 @@
       "TechnicalRadiation.WebApi/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
-          "Microsoft.NETCore.App": "2.1.0"
+          "Microsoft.NETCore.App": "2.1.0",
+          "TechnicalRadiation.Models": "1.0.0",
+          "TechnicalRadiation.Services": "1.0.0"
         },
         "runtime": {
           "TechnicalRadiation.WebApi.dll": {}
@@ -203,6 +205,41 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
+        }
+      },
+      "TechnicalRadiation.Models/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "runtime": {
+          "TechnicalRadiation.Models.dll": {}
+        },
+        "compile": {
+          "TechnicalRadiation.Models.dll": {}
+        }
+      },
+      "TechnicalRadiation.Repositories/1.0.0": {
+        "dependencies": {
+          "TechnicalRadiation.Models": "1.0.0"
+        },
+        "runtime": {
+          "TechnicalRadiation.Repositories.dll": {}
+        },
+        "compile": {
+          "TechnicalRadiation.Repositories.dll": {}
+        }
+      },
+      "TechnicalRadiation.Services/1.0.0": {
+        "dependencies": {
+          "TechnicalRadiation.Models": "1.0.0",
+          "TechnicalRadiation.Repositories": "1.0.0"
+        },
+        "runtime": {
+          "TechnicalRadiation.Services.dll": {}
+        },
+        "compile": {
+          "TechnicalRadiation.Services.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3204,6 +3241,21 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "TechnicalRadiation.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TechnicalRadiation.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TechnicalRadiation.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
