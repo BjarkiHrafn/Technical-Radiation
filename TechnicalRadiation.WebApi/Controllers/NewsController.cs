@@ -44,19 +44,38 @@ namespace TechnicalRadiation.WebApi.Controllers
         ///add methods
         [HttpPatch]
         [Route("")]
-        public IActionResult addNews([FromBody] NewsItemInputModel model) {
-            
+        public IActionResult addNews([FromBody] NewsItemInputModel model)
+        {
+
             //if(!model.ValidateURL(model.ImgSource))
-              //  return Ok("Image source is incorrect");
+            //  return Ok("Image source is incorrect");
             var key = Request.Headers.Keys.Contains("Authorization");
             var zelPass = Request.Headers.Values.Contains("k");
 
-            if(key && zelPass) {
+            if (key && zelPass)
+            {
                 service.createNewsItem(model);
                 return Ok(model);
             }
             return Ok("incorrect password sukkah");
-            
+
+        }
+
+        [HttpPut]
+        [Route("{id:int}")]
+        public IActionResult updateNewsByID(int id)
+        {
+            // 204 statuscode for both PUT and DELETE ef allt gekk upp
+            // 400/412 ef módelið er ekki rétt set upp
+            // 404 ef það er verið að reyna að deleta resource sem er ekki til
+            return StatusCode(204);
+        }
+
+        [HttpDelete]
+        [Route("{id:int}")]
+        public IActionResult deleteNewsByID(int id)
+        {
+            return StatusCode(204);
         }
     }
 }

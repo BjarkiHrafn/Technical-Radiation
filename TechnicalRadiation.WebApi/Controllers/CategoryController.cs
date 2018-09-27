@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TechnicalRadiation.Models.DataTransferObjects;
+using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
 
 namespace TechnicalRadiation.WebApi.Controllers
@@ -34,6 +35,34 @@ namespace TechnicalRadiation.WebApi.Controllers
                 return Ok(cat);
 
             return Ok("no categories found");
+        }
+
+        [HttpPatch]
+        [Route("")]
+        public IActionResult addCategory([FromBody] CategoryInputModel model)
+        {
+            return Ok();
+        }
+
+        [HttpPut]
+        [Route("{int:id}")]
+        public IActionResult updateCategoryByID(int id)
+        {
+            return StatusCode(204);
+        }
+
+        [HttpDelete]
+        [Route("{int:id}")]
+        public IActionResult deleteCategoryByID(int id)
+        {
+            return StatusCode(204);
+        }
+
+        [HttpPatch] // patch for one to many and one to one link
+        [Route("{int:categoryId}/newsItems/{int:newsItemId}")]
+        public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)
+        {
+            return Ok();
         }
     }
 }

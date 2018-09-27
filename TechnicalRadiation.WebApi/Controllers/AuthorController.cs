@@ -48,5 +48,19 @@ namespace TechnicalRadiation.WebApi.Controllers
 
             return Ok("no news found");
         }
+
+        [HttpPatch]
+        [Route("{id:int}")]
+        public IActionResult updateCategoryByID(int id)
+        {
+            return StatusCode(204);
+        }
+
+        [HttpDelete]
+        [Route("{id:int}")]
+        public IActionResult deleteCategoryByID(int id)
+        {
+            return StatusCode(204);
+        }
     }
 }
