@@ -11,13 +11,34 @@ namespace TechnicalRadiation.WebApi.Controllers
         private AuthorService service = new AuthorService();
         [HttpGet]
         [Route("")]
-        public IActionResult GetAllAuthors([FromQuery] int pageNumber, [FromQuery]int pageSize) {
-
-            if(pageNumber == 0) pageNumber = 1;
-            if(pageSize == 0) pageSize = 10;
+        public IActionResult GetAllAuthors() {
 
             IEnumerable<AuthorDto> news = new List<AuthorDto>();
-            //news = service.getAllNews(pageNumber, pageSize);
+            news = service.getAllAuthors();
+
+            if(news != null)
+            return Ok(news);
+
+            return Ok("no news found");
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public IActionResult getNewsByID(int id) {
+            AuthorDetailDto news = new AuthorDetailDto();
+            news = service.getNewsByID(id);
+
+            if(news != null)
+            return Ok(news);
+
+            return Ok("no authors found");
+        }
+
+        [HttpGet]
+        [Route("{id:int}/newsItems")]
+        public IActionResult getAllAuthorsById(int id) {
+            IEnumerable<NewsItemDto> news = new List<NewsItemDto>();
+            news = service.getAllAuthorsById(id);
 
             if(news != null)
             return Ok(news);

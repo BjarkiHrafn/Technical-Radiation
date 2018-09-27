@@ -28,17 +28,14 @@ namespace TechnicalRadiation.WebApi.Repositories
   
             }).Skip((pageNumber-1) * pageSize).Take(pageSize);
 
-            ExpandoObject expando = new ExpandoObject();
-
+            var temp = list.ToList();
             
-            foreach(NewsItemDto n in list) {
-                
-                //n.Links = new ExpandoObject();
-                //expando = putHrefinNews("api", n.Id);
-                n.Links.AddReference("self", "expando");
-                //n.Links.AddReference("edit", new {expando});
-                /*n.Links.AddReference("delete", expando = putHrefinNews("api", n.Id));
-                n.Links.AddReference("authors", expando = putHrefinNews("api/authors", n.AuthorID));*/
+            foreach(NewsItemDto n in temp) {
+            
+                n.Links.AddReference("self", putHrefinNews("api", n.Id));
+                n.Links.AddReference("edit", putHrefinNews("api", n.Id));
+                n.Links.AddReference("delete", putHrefinNews("api", n.Id));
+                n.Links.AddReference("authors", putHrefinNews("api/authors", n.AuthorID));
                 //setja category seinna
                 /*foreach(Category c in _data._categories){
                     if(n.CategoryID == c.ID) {
@@ -47,7 +44,7 @@ namespace TechnicalRadiation.WebApi.Repositories
                 }*/
             }
 
-            return list;
+            return temp;
         }
         
         public NewsItemDetailDto GetNewsByID(int id) {
@@ -62,9 +59,10 @@ namespace TechnicalRadiation.WebApi.Repositories
                 LongDescription = x.LongDescription,
             }).FirstOrDefault(x => x.Id == id);
 
-            data.Links.AddReference(data.Id.ToString(), "http://localhost:5000/api/" + data.Id.ToString());
-            data.Links.AddReference(data.AuthorID.ToString(),"http://localhost:5000/api/authors" + data.AuthorID.ToString() );
-            data.Links.AddReference(data.CategoryID.ToString(),"http://localhost:5000/api/categories" + data.CategoryID.ToString() );
+            data.Links.AddReference("self", putHrefinNews("api", data.Id));
+            data.Links.AddReference("edit", putHrefinNews("api", data.Id));
+            data.Links.AddReference("delete", putHrefinNews("api", data.Id));
+            data.Links.AddReference("authors", putHrefinNews("api/authors", data.AuthorID));
 
             return data;
 
