@@ -41,19 +41,23 @@ namespace TechnicalRadiation.Repositories
 
             return temp;
         }
+        
+        public CategoryDetailsDto getCategoryById(int id) {
+            
+        var data = (from c in DataContext._categories
+            join n in DataContext._news 
+            on c.Id equals n.CategoryID
+            join a in DataContext._author
+            on n.AuthorID equals a.Id
+            where n.CategoryID == id
+                select new CategoryDetailsDto{
+                    Id = c.Id,
+                    Name = c.Name,
+                    Slug = c.Slug,
+                    NumberOfNewsItems = DataContext._news.Count(n => n.CategoryID == c.Id),
+                    ParentCategoryId = c.ParentCategoryId
+                }).FirstOrDefault();
 
-        public CategoryDetailsDto getCategoryById(int id)
-        {
-
-
-            var data = DataContext._categories.ToList().Select(x => new CategoryDetailsDto()
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Slug = x.Slug,
-                NumberOfNewsItems = DataContext._news.Count(n => n.CategoryID == x.Id),
-                ParentCategoryId = x.ParentCategoryId
-            }).FirstOrDefault(x => x.Id == id);
 
             data.Links.AddReference("self", putHrefinNews("api", data.Id));
             data.Links.AddReference("edit", putHrefinNews("api", data.Id));

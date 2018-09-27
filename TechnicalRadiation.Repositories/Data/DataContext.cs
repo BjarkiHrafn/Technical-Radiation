@@ -45,7 +45,7 @@ namespace TechnicalRadiation.Repositories.Data
             new NewsItem
             {
                 AuthorID = 4,
-                CategoryID = 4,
+                CategoryID = 3,
                 Id = 4,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -55,8 +55,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 5,
-                CategoryID = 5,
+                AuthorID = 2,
+                CategoryID = 2,
                 Id = 5,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -66,8 +66,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 6,
-                CategoryID = 6,
+                AuthorID = 1,
+                CategoryID = 1,
                 Id = 6,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -77,8 +77,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 7,
-                CategoryID = 7,
+                AuthorID = 2,
+                CategoryID = 4,
                 Id = 7,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -88,8 +88,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 8,
-                CategoryID = 8,
+                AuthorID = 1,
+                CategoryID = 3,
                 Id = 8,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -99,8 +99,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 8,
-                CategoryID = 8,
+                AuthorID = 1,
+                CategoryID = 4,
                 Id = 8,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -110,8 +110,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 9,
-                CategoryID = 9,
+                AuthorID = 2,
+                CategoryID = 3,
                 Id = 9,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -121,8 +121,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 10,
-                CategoryID = 10,
+                AuthorID = 3,
+                CategoryID = 2,
                 Id = 10,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -132,8 +132,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 11,
-                CategoryID = 11,
+                AuthorID = 3,
+                CategoryID = 3,
                 Id = 11,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -143,8 +143,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 12,
-                CategoryID = 12,
+                AuthorID = 3,
+                CategoryID = 1,
                 Id = 12,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -154,8 +154,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 13,
-                CategoryID = 13,
+                AuthorID = 1,
+                CategoryID = 2,
                 Id = 13,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -165,8 +165,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 14,
-                CategoryID = 14,
+                AuthorID = 2,
+                CategoryID = 1,
                 Id = 14,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
@@ -176,8 +176,8 @@ namespace TechnicalRadiation.Repositories.Data
             },
             new NewsItem
             {
-                AuthorID = 15,
-                CategoryID = 15,
+                AuthorID = 1,
+                CategoryID = 2,
                 Id = 15,
                 Title = "Hey here's some news",
                 ImgSource = "whatevah.jpg",
