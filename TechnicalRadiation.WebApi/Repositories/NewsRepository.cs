@@ -10,7 +10,6 @@ namespace TechnicalRadiation.WebApi.Repositories
 {
     public class NewsRepository
     {
-        private readonly DataContext _data = new DataContext();
         public string URL = "http://localhost:5000/";
 
         public ExpandoObject putHrefinNews(string path, int id) {
@@ -21,7 +20,7 @@ namespace TechnicalRadiation.WebApi.Repositories
         }
 
         public IEnumerable<NewsItemDto> getAllNews(int pageNumber, int pageSize) {
-            var list =  _data._news.ToList().OrderByDescending(x => x.PublishDate).Select(x => new NewsItemDto() {
+            var list =  DataContext._news.ToList().OrderByDescending(x => x.PublishDate).Select(x => new NewsItemDto() {
                 Id = x.Id,
                 Title = x.Title,
                 ImgSource = x.ImgSource,
@@ -34,10 +33,12 @@ namespace TechnicalRadiation.WebApi.Repositories
             
             foreach(NewsItemDto n in list) {
                 
-                n.Links.AddReference("self", expando = putHrefinNews("api", n.Id));
-                n.Links.AddReference("edit", expando = putHrefinNews("api", n.Id));
-                n.Links.AddReference("delete", expando = putHrefinNews("api", n.Id));
-                n.Links.AddReference("authors", expando = putHrefinNews("api/authors", n.AuthorID));
+                //n.Links = new ExpandoObject();
+                //expando = putHrefinNews("api", n.Id);
+                n.Links.AddReference("self", "expando");
+                //n.Links.AddReference("edit", new {expando});
+                /*n.Links.AddReference("delete", expando = putHrefinNews("api", n.Id));
+                n.Links.AddReference("authors", expando = putHrefinNews("api/authors", n.AuthorID));*/
                 //setja category seinna
                 /*foreach(Category c in _data._categories){
                     if(n.CategoryID == c.ID) {
@@ -52,7 +53,7 @@ namespace TechnicalRadiation.WebApi.Repositories
         public NewsItemDetailDto GetNewsByID(int id) {
             
             
-            var data = _data._news.ToList().Select(x => new NewsItemDetailDto() {
+            var data = DataContext._news.ToList().Select(x => new NewsItemDetailDto() {
                 Id = x.Id,
                 ImgSource = x.ImgSource,
                 ShortDescription = x.ShortDescription,

@@ -4,19 +4,17 @@ using TechnicalRadiation.WebApi.Models.Entities;
 
 namespace TechnicalRadiation.WebApi.Data
 {
-    public class DataContext
+    public static class DataContext
     {
-        public IEnumerable<NewsItem> _news
+        public static List<NewsItem> _news = new List<NewsItem>
         {
-            get{
-                return new List<NewsItem> {
             
             new NewsItem
             {
                 AuthorID = 1,
                 CategoryID = 1,
                 Id = 1,
-                Title = "Hey here's some news",
+                Title = "Hey here's some big news",
                 ImgSource = "whatevah.jpg",
                 ShortDescription = "bla",
                 LongDescription = "bla bla",
@@ -187,15 +185,11 @@ namespace TechnicalRadiation.WebApi.Data
                 LongDescription = "bla bla",
                 PublishDate = DateTime.Parse("08/12/2016 10:00:07")
             }
-                
-            };
-            }
-            
-        }
-        public IEnumerable<Author> _authors
+                  
+        };
+        public static List<NewsItem> _news_items {get => _news; set => _news = value;}
+        public static List<Author> _author = new List<Author>
         {
-            get{
-                return new List<Author> {
             
             new Author
             {
@@ -259,12 +253,47 @@ namespace TechnicalRadiation.WebApi.Data
                 Name = "Blelsler feller",
                 ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
                 ProfileImgSource = "blalalla.jpg"
-            },
-            
+            } 
                 
-            };
+        };
+        public static List<Category> _categories = new List<Category>
+        {
+            new Category
+            {
+                Name = "Gadgets",
+                Slug = "gadgets",
+                Id = 0,
+                ModifiedBy ="",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+            },
+            new Category
+            {
+                Name = "Weapons",
+                Slug = "weapons",
+                Id = 1,
+                ModifiedBy ="",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+            },
+            new Category
+            {
+                Name = "Clothes",
+                Slug = "clothes",
+                Id = 2,
+                ModifiedBy ="",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
+            },
+            new Category
+            {
+                Name = "Cars",
+                Slug = "cars",
+                Id = 3,
+                ModifiedBy ="",
+                CreatedDate = DateTime.Parse("08/12/2016 10:00:07"),
+                ModifiedDate = DateTime.Parse("08/12/2016 10:00:07"),
             }
-            
-        }
+        };
     }
 }

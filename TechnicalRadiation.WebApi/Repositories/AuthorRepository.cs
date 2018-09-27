@@ -8,10 +8,9 @@ namespace TechnicalRadiation.WebApi.Repositories
 {
     public class AuthorRepository
     {
-        private readonly DataContext _data = new DataContext();
  
         public IEnumerable<AuthorDto> getAllNews(int pageNumber, int pageSize) {
-            var list =  _data._authors.ToList().Select(x => new AuthorDto() {
+            var list =  DataContext._categories.ToList().Select(x => new AuthorDto() {
                 Id = x.Id,
                 Name = x.Name,
             });
