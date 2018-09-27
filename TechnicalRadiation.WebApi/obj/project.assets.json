@@ -4333,6 +4333,47 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "TechnicalRadiation.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/TechnicalRadiation.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechnicalRadiation.Models.dll": {}
+        }
+      },
+      "TechnicalRadiation.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "TechnicalRadiation.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TechnicalRadiation.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechnicalRadiation.Repositories.dll": {}
+        }
+      },
+      "TechnicalRadiation.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "TechnicalRadiation.Models": "1.0.0",
+          "TechnicalRadiation.Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TechnicalRadiation.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechnicalRadiation.Services.dll": {}
+        }
       }
     }
   },
@@ -11491,32 +11532,49 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "TechnicalRadiation.Models/1.0.0": {
+      "type": "project",
+      "path": "../TechnicalRadiation.Models/TechnicalRadiation.Models.csproj",
+      "msbuildProject": "../TechnicalRadiation.Models/TechnicalRadiation.Models.csproj"
+    },
+    "TechnicalRadiation.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../TechnicalRadiation.Repositories/TechnicalRadiation.Repositories.csproj",
+      "msbuildProject": "../TechnicalRadiation.Repositories/TechnicalRadiation.Repositories.csproj"
+    },
+    "TechnicalRadiation.Services/1.0.0": {
+      "type": "project",
+      "path": "../TechnicalRadiation.Services/TechnicalRadiation.Services.csproj",
+      "msbuildProject": "../TechnicalRadiation.Services/TechnicalRadiation.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "TechnicalRadiation.Models >= 1.0.0",
+      "TechnicalRadiation.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/home/bjarkih/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\leifs\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/TechnicalRadiation.WebApi.csproj",
+      "projectUniqueName": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\TechnicalRadiation.WebApi\\TechnicalRadiation.WebApi.csproj",
       "projectName": "TechnicalRadiation.WebApi",
-      "projectPath": "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/TechnicalRadiation.WebApi.csproj",
-      "packagesPath": "/home/bjarkih/.nuget/packages/",
-      "outputPath": "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/",
+      "projectPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\TechnicalRadiation.WebApi\\TechnicalRadiation.WebApi.csproj",
+      "packagesPath": "C:\\Users\\leifs\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\TechnicalRadiation.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/bjarkih/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\leifs\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -11526,7 +11584,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
+              "projectPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
+            },
+            "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj": {
+              "projectPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
