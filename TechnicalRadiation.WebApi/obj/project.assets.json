@@ -11739,6 +11739,12 @@
   },
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/TechnicalRadiation.WebApi.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,

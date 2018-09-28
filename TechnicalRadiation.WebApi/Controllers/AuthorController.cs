@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TechnicalRadiation.Models.DataTransferObjects;
+using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
 
 namespace TechnicalRadiation.WebApi.Controllers
@@ -50,15 +52,39 @@ namespace TechnicalRadiation.WebApi.Controllers
         }
 
         [HttpPatch]
-        [Route("{id:int}")]
-        public IActionResult updateCategoryByID(int id)
+        [Route("")]
+        public IActionResult createAuthor([FromBody] AuthorInputModel model)
         {
-            return StatusCode(204);
+            if (ModelState.IsValid)
+            {
+                service.createAuthor(model);
+                return Ok(model);
+            }
+            else
+            {
+                service.createAuthor(model);
+                return StatusCode(412, "invalid modelstate");
+            }
+        }
+
+        [HttpPut]
+        [Route("{id:int}")]
+        public IActionResult updateAuthorByID(int id, [FromBody] AuthorInputModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                service.updateAuthorByID(model, id);
+            }
+            else
+            {
+                return StatusCode(412, model);
+            }
+            return NoContent();
         }
 
         [HttpDelete]
         [Route("{id:int}")]
-        public IActionResult deleteCategoryByID(int id)
+        public IActionResult deleteAuthorByID(int id)
         {
             return StatusCode(204);
         }

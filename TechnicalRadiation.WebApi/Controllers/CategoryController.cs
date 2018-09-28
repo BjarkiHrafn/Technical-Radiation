@@ -41,7 +41,20 @@ namespace TechnicalRadiation.WebApi.Controllers
         [Route("")]
         public IActionResult addCategory([FromBody] CategoryInputModel model)
         {
-            return Ok();
+            var key = Request.Headers.Keys.Contains("Authorization");
+            var zelPass = Request.Headers.Values.Contains("k");
+
+            model.slug = model.Name.Replace(' ', '-').ToLower();
+
+            if (ModelState.IsValid)
+            {
+                service.createCategory(model);
+                return Ok(model);
+            }
+            else
+            {
+                return StatusCode(400, "invalid modelstate");
+            }
         }
 
         [HttpPut]
@@ -57,7 +70,8 @@ namespace TechnicalRadiation.WebApi.Controllers
         {
             return StatusCode(204);
         }
- 
+
+
         [HttpPatch] // patch for one to many and one to one link
         [Route("{categoryId:int}/newsItems/{newsItemId:int}")]
         public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TechnicalRadiation.Models.DataTransferObjects;
+using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Repositories;
 
 namespace TechnicalRadiation.Services
@@ -17,7 +18,16 @@ namespace TechnicalRadiation.Services
             return repo.getCategoryById(id);
         }
 
-        public bool linkNewsItemToCategory(int categoryId, int newsItemId) {
+
+        /// all add methods
+
+        public void createCategory(CategoryInputModel model)
+        {
+            repo.createCategory(model);
+        }
+
+        public bool linkNewsItemToCategory(int categoryId, int newsItemId)
+        {
             return repo.linkNewsItemToCategory(categoryId, newsItemId);
         }
     }

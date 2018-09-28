@@ -19,3 +19,24 @@
 /home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.csproj.CopyComplete
 /home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.dll
 /home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.WebApi/obj/Debug/netcoreapp2.1/TechnicalRadiation.WebApi.pdb
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.deps.json
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.runtimeconfig.json
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.runtimeconfig.dev.json
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.dll
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.pdb
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.Models.dll
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.Repositories.dll
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.Services.dll
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.Models.pdb
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.Services.pdb
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\bin\Debug\netcoreapp2.1\TechnicalRadiation.Repositories.pdb
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.csprojAssemblyReference.cache
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.RazorAssemblyInfo.cache
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.RazorAssemblyInfo.cs
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.AssemblyInfoInputs.cache
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.AssemblyInfo.cs
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.csproj.CopyComplete
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.dll
+C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.WebApi\obj\Debug\netcoreapp2.1\TechnicalRadiation.WebApi.pdb
