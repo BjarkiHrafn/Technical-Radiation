@@ -46,7 +46,7 @@ namespace TechnicalRadiation.Repositories
                 Name = x.Name,
             });
 
-            List<ExpandoObject> expando = new List<ExpandoObject>();
+           
             var listList = list.ToList();
 
             foreach (AuthorDto n in listList)
@@ -57,14 +57,19 @@ namespace TechnicalRadiation.Repositories
                 n.Links.AddReference("newsItems", putHrefinNewsItems("api/authors/" + n.Id.ToString(), n.Name));
 
 
-
-                foreach (NewsItem news in DataContext._news.ToList())
+                List<ExpandoObject> expando = new List<ExpandoObject>();
+                foreach (NewsItem news in DataContext._news)
                 {
-                    if (n.Id == news.AuthorID)
-                        expando.Add(putHrefinNewsItemsDetails("api", n.Id));
+                    if (n.Id == news.AuthorID) {
+                        expando.Add(putHrefinNewsItemsDetails("api", news.Id));
+                         
+                    }
+                        
                 }
+                n.Links.AddReference("newsItemsDetailed", expando); 
+                
 
-                n.Links.AddReference("newsItemsDetailed", expando);
+                
 
 
             }

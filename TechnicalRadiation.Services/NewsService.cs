@@ -29,7 +29,7 @@ namespace TechnicalRadiation.Services
 
         public bool updateNewsItem(NewsItemInputModel model, int id)
         {
-            return updateNewsItem(model, id);
+            return repo.updateNewsItem(model, id);
         }
     }
 }

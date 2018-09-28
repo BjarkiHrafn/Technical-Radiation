@@ -103,6 +103,25 @@ namespace TechnicalRadiation.Repositories
 
             });
 
+        }
+
+        public bool updateNewsItem(NewsItemInputModel model, int id) {
+
+            var updated = DataContext._news.FirstOrDefault(x => x.Id == id);
+
+            if(updated != null) {
+                
+                updated.ImgSource = model.ImgSource;
+                updated.LongDescription = model.LongDescription;
+                updated.ShortDescription = model.ShortDescription;
+                updated.Title = model.Title;
+                updated.PublishDate = model.PublishDate;
+                DataContext._news.Add(updated);
+                return true;
+            }
+            return false;
+
+
         } 
     }
 }

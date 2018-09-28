@@ -330,23 +330,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leifs\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/bjarkih/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\TechnicalRadiation.Repositories.csproj",
+      "projectUniqueName": "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Repositories/TechnicalRadiation.Repositories.csproj",
       "projectName": "TechnicalRadiation.Repositories",
-      "projectPath": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\TechnicalRadiation.Repositories.csproj",
-      "packagesPath": "C:\\Users\\leifs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\obj\\",
+      "projectPath": "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Repositories/TechnicalRadiation.Repositories.csproj",
+      "packagesPath": "/home/bjarkih/.nuget/packages/",
+      "outputPath": "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Repositories/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\leifs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/bjarkih/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -357,8 +357,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
-              "projectPath": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
+            "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/TechnicalRadiation.Models.csproj": {
+              "projectPath": "/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/TechnicalRadiation.Models.csproj"
             }
           }
         }

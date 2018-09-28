@@ -18,7 +18,7 @@ namespace TechnicalRadiation.WebApi.Controllers
         {
 
             if (pageNumber == 0) pageNumber = 1;
-            if (pageSize == 0) pageSize = 10;
+            if (pageSize == 0) pageSize = 14;
 
             IEnumerable<NewsItemDto> news = new List<NewsItemDto>();
             news = service.getAllNews(pageNumber, pageSize);
@@ -67,16 +67,20 @@ namespace TechnicalRadiation.WebApi.Controllers
 
         }
 
-        [HttpPatch]
+        [HttpPut]
         [Route("{id:int}")]
-        public IActionResult updateNewsByID([FromBody]NewsItemInputModel model, int id)
+        public IActionResult updateNewsByID(int id, [FromBody]NewsItemInputModel model)
         {
             // 204 statuscode for both PUT and DELETE ef allt gekk upp
             // 400/412 ef módelið er ekki rétt set upp
             // 404 ef það er verið að reyna að deleta resource sem er ekki til
-            var res = service.updateNewsItem(model, id);
+            
+            if(ModelState.IsValid) {
+                var res = service.updateNewsItem(model, id);
 
-            return Ok(res);
+                return Ok(res);
+            }
+            return Ok("Missing model properties");
         }
 
         [HttpDelete]

@@ -7,12 +7,21 @@
 /home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.AssemblyInfo.cs
 /home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.dll
 /home/bjarkih/Documents/5th Semester/VEFT/Verkefni/largeAss1/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.pdb
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\bin\Debug\netstandard2.0\TechnicalRadiation.Models.deps.json
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\bin\Debug\netstandard2.0\TechnicalRadiation.Models.dll
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\bin\Debug\netstandard2.0\TechnicalRadiation.Models.pdb
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.csprojAssemblyReference.cache
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.csproj.CoreCompileInputs.cache
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.AssemblyInfoInputs.cache
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.AssemblyInfo.cs
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.dll
-C:\Users\leifs\Documents\Skoli2018\VEFT\Assignments\LargeAssignment_I\Technical-Radiation\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.pdb
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/bin/Debug/netstandard2.0/TechnicalRadiation.Models.deps.json
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/bin/Debug/netstandard2.0/TechnicalRadiation.Models.dll
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/bin/Debug/netstandard2.0/TechnicalRadiation.Models.pdb
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.csprojAssemblyReference.cache
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.csproj.CoreCompileInputs.cache
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.AssemblyInfoInputs.cache
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.AssemblyInfo.cs
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.dll
+C:/Users/leifs/Documents/Skoli2018/VEFT/Assignments/LargeAssignment_I/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.pdb
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/bin/Debug/netstandard2.0/TechnicalRadiation.Models.deps.json
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/bin/Debug/netstandard2.0/TechnicalRadiation.Models.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/bin/Debug/netstandard2.0/TechnicalRadiation.Models.pdb
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.csprojAssemblyReference.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.csproj.CoreCompileInputs.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.AssemblyInfoInputs.cache
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.AssemblyInfo.cs
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.dll
+/home/bjarkih/Documents/5th Semester/VEFT/Verkefni/newLarge/Technical-Radiation/TechnicalRadiation.Models/obj/Debug/netstandard2.0/TechnicalRadiation.Models.pdb
