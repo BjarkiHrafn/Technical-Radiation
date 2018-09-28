@@ -87,7 +87,7 @@ namespace TechnicalRadiation.Repositories
             data.Links.AddReference("self", putHrefinNewsItemsDetails("api/authors", data.Id));
             data.Links.AddReference("edit", putHrefinNewsItemsDetails("api/authors", data.Id));
             data.Links.AddReference("delete", putHrefinNewsItemsDetails("api/authors", data.Id));
-            data.Links.AddReference("newsItems", putHrefinNewsItems("api/authors/" + data.Id.ToString(), data.Name));
+            data.Links.AddReference("newsItems", putHrefinNewsItems("api/authors" + data.Id.ToString(), data.Name));
 
             List<ExpandoObject> expando = new List<ExpandoObject>();
 

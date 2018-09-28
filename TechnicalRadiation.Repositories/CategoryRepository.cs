@@ -2,8 +2,10 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using TechnicalRadiation.Models.DataTransferObjects;
+using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Repositories.Data;
 using TechnicalRadiation.Repositories.Extensions;
+using TechnicalRadiation.Models.Entities;
 
 namespace TechnicalRadiation.Repositories
 {
@@ -66,6 +68,23 @@ namespace TechnicalRadiation.Repositories
 
             return data;
 
+        }
+
+        public bool linkNewsItemToCategory(int categoryId, int newsItemId) {
+
+            var NewsItem = (from news in DataContext._news
+                where news.Id == newsItemId select news).FirstOrDefault();
+
+            
+            if(NewsItem != null) {
+                NewsItem.CategoryID = categoryId;
+                DataContext._news.Add(NewsItem);
+                
+                return true;
+            }
+
+            return false;
+            
         }
     }
 }

@@ -57,12 +57,13 @@ namespace TechnicalRadiation.WebApi.Controllers
         {
             return StatusCode(204);
         }
-/* 
+ 
         [HttpPatch] // patch for one to many and one to one link
-        [Route("{int:categoryId}/newsItems/{int:newsItemId}")]
+        [Route("{categoryId:int}/newsItems/{newsItemId:int}")]
         public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)
         {
-            return Ok();
-        }*/
+            var ret = service.linkNewsItemToCategory(categoryId, newsItemId);
+            return Ok(ret);
+        }
     }
 }
