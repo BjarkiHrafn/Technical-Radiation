@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using TechnicalRadiation.Models.Attributes;
 
 namespace TechnicalRadiation.Models.InputModels
 {
@@ -8,6 +9,7 @@ namespace TechnicalRadiation.Models.InputModels
         [Required]
         public string Title { get; set; }
         [Required]
+        [validateImgUrl]
         public string ImgSource { get; set; }
         [Required]
         [MaxLength(50)]
@@ -17,10 +19,5 @@ namespace TechnicalRadiation.Models.InputModels
         [Required]
         public DateTime PublishDate { get; set; }
 
-        public bool ValidateURL(string uri)
-        {
-            Uri validatedUri;
-            return Uri.TryCreate(uri, UriKind.RelativeOrAbsolute, out validatedUri);
-        }
     }
 }
