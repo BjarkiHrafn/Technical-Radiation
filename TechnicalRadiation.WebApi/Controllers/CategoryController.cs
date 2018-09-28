@@ -41,6 +41,13 @@ namespace TechnicalRadiation.WebApi.Controllers
         [Route("")]
         public IActionResult addCategory([FromBody] CategoryInputModel model)
         {
+            var key = Request.Headers.Keys.Contains("Authorization");
+            var zelPass = Request.Headers.Values.Contains("k");
+
+            if (key && zelPass)
+            {
+                return Ok();
+            }
             return Ok();
         }
 
