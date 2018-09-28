@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TechnicalRadiation.Models.DataTransferObjects;
@@ -51,13 +52,15 @@ namespace TechnicalRadiation.WebApi.Controllers
             //  return Ok("Image source is incorrect");
             var key = Request.Headers.Keys.Contains("Authorization");
             var zelPass = Request.Headers.Values.Contains("k");
+            model.PublishDate = DateTime.Now;
 
-            if (key && zelPass)
-            {
+            if (ModelState.IsValid) {
                 service.createNewsItem(model);
                 return Ok(model);
+            } else {
+                return Ok("Not a valid url");
             }
-            return Ok("incorrect password sukkah");
+            //return Ok("incorrect password sukkah");
 
         }
 
