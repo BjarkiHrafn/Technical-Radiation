@@ -74,10 +74,8 @@ namespace TechnicalRadiation.Repositories
 
         public AuthorDetailDto getAuthorById(int id)
         {
-            var data = (from n in DataContext._news
-                        join a in DataContext._author
-                        on n.AuthorID equals a.Id
-                        where n.AuthorID == id
+            var data = (from a in DataContext._author
+                        where a.Id == id
                         select new AuthorDetailDto
                         {
                             Id = a.Id,
@@ -179,6 +177,16 @@ namespace TechnicalRadiation.Repositories
                 updateAuthor.ModifiedDate = DateTime.Now;
                 updateAuthor.Name = model.Name;
                 updateAuthor.ProfileImgSource = model.ProfileImgSource;
+            }
+        }
+
+        public void deleteAuthorByID(int id)
+        {
+            var deleteAuthor = DataContext._author.FirstOrDefault(x => x.Id == id);
+
+            if (deleteAuthor != null)
+            {
+                DataContext._author.Remove(deleteAuthor);
             }
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TechnicalRadiation.Models.DataTransferObjects;
 using TechnicalRadiation.Models.InputModels;
@@ -29,6 +30,20 @@ namespace TechnicalRadiation.Services
         public bool linkNewsItemToCategory(int categoryId, int newsItemId)
         {
             return repo.linkNewsItemToCategory(categoryId, newsItemId);
+        }
+
+        public void updateCategoryById(CategoryInputModel model, int id)
+        {
+            var category = repo.getCategoryById(id);
+            if (category == null) { throw new Exception($"Category with id {id} was not found"); }
+            repo.updateCategoryByID(model, id);
+        }
+
+        public void deleteCategoryByID(int id)
+        {
+            var category = repo.getCategoryById(id);
+            if (category == null) { throw new Exception($"Category with id {id} was not found"); }
+            repo.deleteCategoryById(id);
         }
     }
 }

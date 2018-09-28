@@ -86,6 +86,7 @@ namespace TechnicalRadiation.WebApi.Controllers
         [Route("{id:int}")]
         public IActionResult deleteAuthorByID(int id)
         {
+            service.deleteAuthorByID(id);
             return StatusCode(204);
         }
     }

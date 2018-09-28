@@ -59,15 +59,24 @@ namespace TechnicalRadiation.WebApi.Controllers
 
         [HttpPut]
         [Route("{id:int}")]
-        public IActionResult updateCategoryByID(int id)
+        public IActionResult updateCategoryByID(int id, [FromBody] CategoryInputModel model)
         {
-            return StatusCode(204);
+            if (ModelState.IsValid)
+            {
+                service.updateCategoryById(model, id);
+            }
+            else
+            {
+                return StatusCode(412, model);
+            }
+            return NoContent();
         }
 
         [HttpDelete]
         [Route("{id:int}")]
         public IActionResult deleteCategoryByID(int id)
         {
+            service.deleteCategoryByID(id);
             return StatusCode(204);
         }
 

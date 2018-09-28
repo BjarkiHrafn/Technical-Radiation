@@ -54,24 +54,29 @@ namespace TechnicalRadiation.WebApi.Controllers
             var zelPass = Request.Headers.Values.Contains("k");
             model.PublishDate = DateTime.Now;
 
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid)
+            {
                 service.createNewsItem(model);
                 return Ok(model);
-            } else {
+            }
+            else
+            {
                 return Ok("Not a valid url");
             }
             //return Ok("incorrect password sukkah");
 
         }
 
-        [HttpPut]
+        [HttpPatch]
         [Route("{id:int}")]
-        public IActionResult updateNewsByID(int id)
+        public IActionResult updateNewsByID([FromBody]NewsItemInputModel model, int id)
         {
             // 204 statuscode for both PUT and DELETE ef allt gekk upp
             // 400/412 ef módelið er ekki rétt set upp
             // 404 ef það er verið að reyna að deleta resource sem er ekki til
-            return StatusCode(204);
+            var res = service.updateNewsItem(model, id);
+
+            return Ok(res);
         }
 
         [HttpDelete]

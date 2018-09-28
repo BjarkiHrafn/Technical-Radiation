@@ -35,5 +35,12 @@ namespace TechnicalRadiation.Services
             if (author == null) { throw new Exception($"Author with id {id} was not found"); }
             repo.updateAuthorByID(model, id);
         }
+
+        public void deleteAuthorByID(int id)
+        {
+            var author = repo.getAuthorById(id);
+            if (author == null) { throw new Exception($"Author with id {id} was not found"); }
+            repo.deleteAuthorByID(id);
+        }
     }
 }

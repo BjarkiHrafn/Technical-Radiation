@@ -6,6 +6,7 @@ using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Repositories.Data;
 using TechnicalRadiation.Repositories.Extensions;
 using TechnicalRadiation.Models.Entities;
+using System;
 
 namespace TechnicalRadiation.Repositories
 {
@@ -106,6 +107,31 @@ namespace TechnicalRadiation.Repositories
 
             return false;
 
+        }
+
+        public void updateCategoryByID(CategoryInputModel model, int id)
+        {
+            var updateCategory = DataContext._categories.FirstOrDefault(x => x.Id == id);
+
+            if (updateCategory != null)
+            {
+                updateCategory.ModifiedBy = "SystemAdmin";
+                updateCategory.ModifiedDate = DateTime.Now;
+                updateCategory.Name = model.Name;
+                updateCategory.ParentCategoryId = model.ParentCategoryId;
+                updateCategory.Slug = model.slug;
+            }
+
+        }
+
+        public void deleteCategoryById(int id)
+        {
+
+            var deleteCategory = DataContext._categories.FirstOrDefault(x => x.Id == id);
+            if (deleteCategory != null)
+            {
+                DataContext._categories.Remove(deleteCategory);
+            }
         }
     }
 }

@@ -22,8 +22,14 @@ namespace TechnicalRadiation.Services
 
         /// all add methods
 
-        public void createNewsItem(NewsItemInputModel model) {
+        public void createNewsItem(NewsItemInputModel model)
+        {
             repo.createNewsItem(model);
+        }
+
+        public bool updateNewsItem(NewsItemInputModel model, int id)
+        {
+            return updateNewsItem(model, id);
         }
     }
 }
