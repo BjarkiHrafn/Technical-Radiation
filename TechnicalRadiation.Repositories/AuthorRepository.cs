@@ -72,14 +72,17 @@ namespace TechnicalRadiation.Repositories
 
         public AuthorDetailDto getAuthorById(int id)
         {
-
-            var data = DataContext._author.ToList().Select(x => new AuthorDetailDto()
-            {
-                Id = x.Id,
-                Name = x.Name,
-                ProfileImgSource = x.ProfileImgSource,
-                Bio = x.Bio
-            }).FirstOrDefault(x => x.Id == id);
+               var data = (from n in DataContext._news
+                            join a in DataContext._author
+                            on n.AuthorID equals a.Id
+                            where n.AuthorID == id
+                            select new AuthorDetailDto
+                            {
+                                Id = a.Id,
+                                Name = a.Name,
+                                ProfileImgSource = a.ProfileImgSource,
+                                Bio = a.Bio
+                            }).FirstOrDefault();
 
             data.Links.AddReference("self", putHrefinNewsItemsDetails("api/authors", data.Id));
             data.Links.AddReference("edit", putHrefinNewsItemsDetails("api/authors", data.Id));
@@ -88,10 +91,10 @@ namespace TechnicalRadiation.Repositories
 
             List<ExpandoObject> expando = new List<ExpandoObject>();
 
-            foreach (NewsItem news in DataContext._news.ToList())
+            foreach (NewsItem news in DataContext._news)
             {
                 if (data.Id == news.AuthorID)
-                    expando.Add(putHrefinNewsItemsDetails("api", data.Id));
+                    expando.Add(putHrefinNewsItemsDetails("api", news.Id));
             }
 
             data.Links.AddReference("newsItemsDetailed", expando);
@@ -111,35 +114,39 @@ namespace TechnicalRadiation.Repositories
                                 Id = n.Id,
                                 Title = n.Title,
                                 ImgSource = n.ImgSource,
-                                ShortDescription = n.ShortDescription
+                                ShortDescription = n.ShortDescription,
+                                AuthorID = n.AuthorID,
+                                CategoryID = n.CategoryID
                             }).ToList();
 
-            List<ExpandoObject> authors = new List<ExpandoObject>();
-            List<ExpandoObject> categories = new List<ExpandoObject>();
+            
+            
             var listList = combined.ToList();
 
             foreach (NewsItemDto n in listList)
             {
+                List<ExpandoObject> categories = new List<ExpandoObject>();
                 n.Links.AddReference("self", putHrefinAuthors("api", n.Id));
                 n.Links.AddReference("edit", putHrefinAuthors("api", n.Id));
                 n.Links.AddReference("delete", putHrefinAuthors("api", n.Id));
-
-
-
-                foreach (Author news in DataContext._author.ToList())
-                {
-                    if (n.AuthorID == news.Id)
-                        authors.Add(putHrefinNewsItemsDetails("api/authors", n.AuthorID));
+                
+                if(n.AuthorID == id) {
+                    List<ExpandoObject> authors = new List<ExpandoObject>();
+                    authors.Add(putHrefinNewsItemsDetails("api/authors", n.AuthorID));
+                    n.Links.AddReference("authors", authors);
                 }
-                n.Links.AddReference("authors", authors);
-
-                foreach (Category cat in DataContext._categories.ToList())
-                {
-                    if (n.CategoryID == cat.Id)
+                    
+                foreach (Category cat in DataContext._categories) {
+                    if (n.CategoryID == cat.Id && n.AuthorID == id) {
+                        
                         categories.Add(putHrefinNewsItemsDetails("api/categories", n.CategoryID));
+                        n.Links.AddReference("categories", categories);
+                    }
+                        
                 }
-                n.Links.AddReference("categories", categories);
+                
             }
+            
 
             return listList;
         }

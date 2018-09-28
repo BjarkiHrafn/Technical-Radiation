@@ -58,8 +58,20 @@ namespace TechnicalRadiation.Repositories
         public NewsItemDetailDto GetNewsByID(int id)
         {
 
-
-            var data = DataContext._news.ToList().Select(x => new NewsItemDetailDto()
+             var data = (from n in DataContext._news
+                            join a in DataContext._author
+                            on n.AuthorID equals a.Id
+                            where n.AuthorID == id
+                            select new NewsItemDetailDto
+                            {
+                                Id = n.Id,
+                                ImgSource = n.ImgSource,
+                                ShortDescription = n.ShortDescription,
+                                Title = n.Title,
+                                PublishDate = n.PublishDate,
+                                LongDescription = n.LongDescription
+                            }).FirstOrDefault();
+            /*var data = DataContext._news.ToList().Select(x => new NewsItemDetailDto()
             {
                 Id = x.Id,
                 ImgSource = x.ImgSource,
@@ -68,7 +80,7 @@ namespace TechnicalRadiation.Repositories
                 PublishDate = x.PublishDate,
                 LongDescription = x.LongDescription,
             }).FirstOrDefault(x => x.Id == id);
-
+*/
             data.Links.AddReference("self", putHrefinNews("api", data.Id));
             data.Links.AddReference("edit", putHrefinNews("api", data.Id));
             data.Links.AddReference("delete", putHrefinNews("api", data.Id));
