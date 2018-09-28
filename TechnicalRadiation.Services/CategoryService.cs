@@ -16,5 +16,9 @@ namespace TechnicalRadiation.Services
         {
             return repo.getCategoryById(id);
         }
+
+        public bool linkNewsItemToCategory(int categoryId, int newsItemId) {
+            return repo.linkNewsItemToCategory(categoryId, newsItemId);
+        }
     }
 }
