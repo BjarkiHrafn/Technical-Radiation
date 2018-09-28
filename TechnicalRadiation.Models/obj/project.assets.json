@@ -372,5 +372,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\obj\\TechnicalRadiation.Models.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

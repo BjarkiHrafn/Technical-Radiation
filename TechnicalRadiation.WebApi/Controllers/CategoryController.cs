@@ -52,24 +52,24 @@ namespace TechnicalRadiation.WebApi.Controllers
         }
 
         [HttpPut]
-        [Route("{int:id}")]
+        [Route("{id:int}")]
         public IActionResult updateCategoryByID(int id)
         {
             return StatusCode(204);
         }
 
         [HttpDelete]
-        [Route("{int:id}")]
+        [Route("{id:int}")]
         public IActionResult deleteCategoryByID(int id)
         {
             return StatusCode(204);
         }
-
+/* 
         [HttpPatch] // patch for one to many and one to one link
         [Route("{int:categoryId}/newsItems/{int:newsItemId}")]
         public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)
         {
             return Ok();
-        }
+        }*/
     }
 }
