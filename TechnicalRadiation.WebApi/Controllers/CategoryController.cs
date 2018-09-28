@@ -44,13 +44,15 @@ namespace TechnicalRadiation.WebApi.Controllers
             var key = Request.Headers.Keys.Contains("Authorization");
             var zelPass = Request.Headers.Values.Contains("k");
 
-            /*if (key && zelPass)
+            if (ModelState.IsValid)
             {
                 service.createCategory(model);
-                return Ok("category created");
-            }*/
-            service.createCategory(model);
-            return Ok("tibi");
+                return Ok(model);
+            }
+            else
+            {
+                return StatusCode(400, "invalid modelstate");
+            }
         }
 
         [HttpPut]
