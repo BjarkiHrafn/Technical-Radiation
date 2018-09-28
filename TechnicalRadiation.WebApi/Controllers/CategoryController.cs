@@ -44,11 +44,13 @@ namespace TechnicalRadiation.WebApi.Controllers
             var key = Request.Headers.Keys.Contains("Authorization");
             var zelPass = Request.Headers.Values.Contains("k");
 
-            if (key && zelPass)
+            /*if (key && zelPass)
             {
-                return Ok();
-            }
-            return Ok();
+                service.createCategory(model);
+                return Ok("category created");
+            }*/
+            service.createCategory(model);
+            return Ok("tibi");
         }
 
         [HttpPut]
@@ -64,12 +66,12 @@ namespace TechnicalRadiation.WebApi.Controllers
         {
             return StatusCode(204);
         }
-/* 
-        [HttpPatch] // patch for one to many and one to one link
-        [Route("{int:categoryId}/newsItems/{int:newsItemId}")]
-        public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)
-        {
-            return Ok();
-        }*/
+        /* 
+                [HttpPatch] // patch for one to many and one to one link
+                [Route("{int:categoryId}/newsItems/{int:newsItemId}")]
+                public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)
+                {
+                    return Ok();
+                }*/
     }
 }

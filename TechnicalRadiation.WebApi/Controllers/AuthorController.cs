@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TechnicalRadiation.Models.DataTransferObjects;
+using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
 
 namespace TechnicalRadiation.WebApi.Controllers
@@ -50,15 +52,30 @@ namespace TechnicalRadiation.WebApi.Controllers
         }
 
         [HttpPatch]
+        [Route("")]
+        public IActionResult createAuthor([FromBody] AuthorInputModel model)
+        {
+            //return Ok(model.ValidateURL(model.ProfileImgSource));
+
+            /*if (!model.ValidateURL(model.ProfileImgSource))
+            {
+                return StatusCode(400, "bad url");
+            }*/
+            service.createAuthor(model);
+            return Ok();
+
+        }
+
+        [HttpPut]
         [Route("{id:int}")]
-        public IActionResult updateCategoryByID(int id)
+        public IActionResult updateAuthorByID(int id)
         {
             return StatusCode(204);
         }
 
         [HttpDelete]
         [Route("{id:int}")]
-        public IActionResult deleteCategoryByID(int id)
+        public IActionResult deleteAuthorByID(int id)
         {
             return StatusCode(204);
         }

@@ -318,11 +318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
+      "projectUniqueName": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
       "projectName": "TechnicalRadiation.Models",
-      "projectPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
+      "projectPath": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
       "packagesPath": "C:\\Users\\leifs\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\obj\\",
+      "outputPath": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -372,13 +372,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Models\\obj\\TechnicalRadiation.Models.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
