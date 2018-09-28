@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TechnicalRadiation.Models.DataTransferObjects;
 using TechnicalRadiation.Models.InputModels;
@@ -26,6 +27,13 @@ namespace TechnicalRadiation.Services
         public void createAuthor(AuthorInputModel model)
         {
             repo.createAuthor(model);
+        }
+
+        public void updateAuthorByID(AuthorInputModel model, int id)
+        {
+            var author = repo.getAuthorById(id);
+            if (author == null) { throw new Exception($"Author with id {id} was not found"); }
+            repo.updateAuthorByID(model, id);
         }
     }
 }

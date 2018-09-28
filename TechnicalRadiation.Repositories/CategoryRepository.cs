@@ -78,13 +78,13 @@ namespace TechnicalRadiation.Repositories
         public void createCategory(CategoryInputModel model)
         {
 
-            var generatedSlug = model.Name.Replace(' ', '-').ToLower();
+
             DataContext._categories.Add(new Category()
             {
                 Id = DataContext._categories.Max(x => x.Id) + 1,
                 Name = model.Name,
                 ParentCategoryId = model.ParentCategoryId,
-                Slug = generatedSlug // <-- change?
+                Slug = model.slug
 
             });
         }

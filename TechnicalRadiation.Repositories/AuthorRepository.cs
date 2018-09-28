@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
@@ -165,6 +166,20 @@ namespace TechnicalRadiation.Repositories
                 ProfileImgSource = model.ProfileImgSource,
                 Bio = model.Bio
             });
+        }
+
+        public void updateAuthorByID(AuthorInputModel model, int id)
+        {
+            var updateAuthor = DataContext._author.FirstOrDefault(x => x.Id == id);
+
+            if (updateAuthor != null)
+            {
+                updateAuthor.Bio = model.Bio;
+                updateAuthor.ModifiedBy = "SystemAdmin";
+                updateAuthor.ModifiedDate = DateTime.Now;
+                updateAuthor.Name = model.Name;
+                updateAuthor.ProfileImgSource = model.ProfileImgSource;
+            }
         }
     }
 }

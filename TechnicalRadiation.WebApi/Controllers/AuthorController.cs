@@ -55,22 +55,31 @@ namespace TechnicalRadiation.WebApi.Controllers
         [Route("")]
         public IActionResult createAuthor([FromBody] AuthorInputModel model)
         {
-            //return Ok(model.ValidateURL(model.ProfileImgSource));
-
-            /*if (!model.ValidateURL(model.ProfileImgSource))
+            if (ModelState.IsValid)
             {
-                return StatusCode(400, "bad url");
-            }*/
-            service.createAuthor(model);
-            return Ok();
-
+                service.createAuthor(model);
+                return Ok(model);
+            }
+            else
+            {
+                service.createAuthor(model);
+                return StatusCode(412, "invalid modelstate");
+            }
         }
 
         [HttpPut]
         [Route("{id:int}")]
-        public IActionResult updateAuthorByID(int id)
+        public IActionResult updateAuthorByID(int id, [FromBody] AuthorInputModel model)
         {
-            return StatusCode(204);
+            if (ModelState.IsValid)
+            {
+                service.updateAuthorByID(model, id);
+            }
+            else
+            {
+                return StatusCode(412, model);
+            }
+            return NoContent();
         }
 
         [HttpDelete]

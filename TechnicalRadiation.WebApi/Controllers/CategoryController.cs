@@ -44,6 +44,8 @@ namespace TechnicalRadiation.WebApi.Controllers
             var key = Request.Headers.Keys.Contains("Authorization");
             var zelPass = Request.Headers.Values.Contains("k");
 
+            model.slug = model.Name.Replace(' ', '-').ToLower();
+
             if (ModelState.IsValid)
             {
                 service.createCategory(model);

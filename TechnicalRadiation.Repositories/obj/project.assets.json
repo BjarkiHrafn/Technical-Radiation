@@ -336,11 +336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\TechnicalRadiation.Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\TechnicalRadiation.Repositories.csproj",
       "projectName": "TechnicalRadiation.Repositories",
-      "projectPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\TechnicalRadiation.Repositories.csproj",
+      "projectPath": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\TechnicalRadiation.Repositories.csproj",
       "packagesPath": "C:\\Users\\leifs\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\obj\\",
+      "outputPath": "C:\\Users\\leifs\\Documents\\Skoli2018\\VEFT\\Assignments\\LargeAssignment_I\\Technical-Radiation\\TechnicalRadiation.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
