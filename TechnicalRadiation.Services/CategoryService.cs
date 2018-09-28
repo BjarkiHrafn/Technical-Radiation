@@ -18,11 +18,17 @@ namespace TechnicalRadiation.Services
             return repo.getCategoryById(id);
         }
 
+
         /// all add methods
 
         public void createCategory(CategoryInputModel model)
         {
             repo.createCategory(model);
+        }
+
+        public bool linkNewsItemToCategory(int categoryId, int newsItemId)
+        {
+            return repo.linkNewsItemToCategory(categoryId, newsItemId);
         }
     }
 }

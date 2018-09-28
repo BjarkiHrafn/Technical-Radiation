@@ -24,6 +24,7 @@ namespace TechnicalRadiation.Repositories
             return exp;
         }
 
+
         public IEnumerable<NewsItemDto> getAllNews(int pageNumber, int pageSize)
         {
             var list = DataContext._news.ToList().OrderByDescending(x => x.PublishDate).Select(x => new NewsItemDto()
@@ -32,24 +33,29 @@ namespace TechnicalRadiation.Repositories
                 Title = x.Title,
                 ImgSource = x.ImgSource,
                 ShortDescription = x.ShortDescription,
+                CategoryID = x.CategoryID,
+                AuthorID = x.AuthorID
+
 
             }).Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
+            
             var temp = list.ToList();
 
             foreach (NewsItemDto n in temp)
             {
-
+                List<ExpandoObject> authors = new List<ExpandoObject>();
+                List<ExpandoObject> categories = new List<ExpandoObject>();
                 n.Links.AddReference("self", putHrefinNews("api", n.Id));
                 n.Links.AddReference("edit", putHrefinNews("api", n.Id));
                 n.Links.AddReference("delete", putHrefinNews("api", n.Id));
-                n.Links.AddReference("authors", putHrefinNews("api/authors", n.AuthorID));
+                authors.Add(putHrefinNews("api/authors", n.AuthorID));
+                n.Links.AddReference("authors", authors);
                 //setja category seinna
-                /*foreach(Category c in _data._categories){
-                    if(n.CategoryID == c.ID) {
-                        n.Links.AddReference("categories", expando = putHrefinNews("api/categories", c.ID));
-                    }
-                }*/
+                
+                categories.Add(putHrefinNews("api/categories", n.CategoryID));
+                n.Links.AddReference("categories", categories);
+                
             }
 
             return temp;
@@ -71,16 +77,7 @@ namespace TechnicalRadiation.Repositories
                                 PublishDate = n.PublishDate,
                                 LongDescription = n.LongDescription
                             }).FirstOrDefault();
-            /*var data = DataContext._news.ToList().Select(x => new NewsItemDetailDto()
-            {
-                Id = x.Id,
-                ImgSource = x.ImgSource,
-                ShortDescription = x.ShortDescription,
-                Title = x.Title,
-                PublishDate = x.PublishDate,
-                LongDescription = x.LongDescription,
-            }).FirstOrDefault(x => x.Id == id);
-*/
+     
             data.Links.AddReference("self", putHrefinNews("api", data.Id));
             data.Links.AddReference("edit", putHrefinNews("api", data.Id));
             data.Links.AddReference("delete", putHrefinNews("api", data.Id));

@@ -66,12 +66,14 @@ namespace TechnicalRadiation.WebApi.Controllers
         {
             return StatusCode(204);
         }
-        /* 
-                [HttpPatch] // patch for one to many and one to one link
-                [Route("{int:categoryId}/newsItems/{int:newsItemId}")]
-                public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)
-                {
-                    return Ok();
-                }*/
+
+
+        [HttpPatch] // patch for one to many and one to one link
+        [Route("{categoryId:int}/newsItems/{newsItemId:int}")]
+        public IActionResult linkNewsItemToCategory(int categoryId, int newsItemId)
+        {
+            var ret = service.linkNewsItemToCategory(categoryId, newsItemId);
+            return Ok(ret);
+        }
     }
 }
